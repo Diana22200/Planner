@@ -1,0 +1,85 @@
+/*styles de Planner*/
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+	border: none;
+	outline: none;
+}
+*, *::before,*::after{
+    box-sizing: border-box;
+}
+/*El primer color de fondo del body*/
+.fondo1{
+    background-color:#fff7e0;
+}
+/*Margen para el navegador*/
+nav{
+    margin: 10px;
+}
+/*Tamaños de letra*/
+.letra_mediana{
+    font-size: 21px;
+}
+.letra_grande{
+    font-size: 40px;
+}
+.letra_extragrande{
+    font-size: 70px;
+}
+/*centrar en general*/
+.centrar{
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+}
+/*botones en general*/
+.boton{
+    padding: 1px 1.6em;
+    margin:4px;
+    display: inline-block;
+}
+.boton:active {
+    transform: scale(.95);
+}
+
+/*Estilos principalmente de index.html*/
+
+/*Contenedor del eslogan*/
+.cont_eslogan{
+    position: relative;
+    width: 65%;
+}
+/*Parte página index de eslogan*/
+.eslogan{
+    background-color: #fad39a;
+    line-height: 210px;
+    width: 70%;
+    position: absolute;
+    bottom:150px;
+    display:inline-block;
+}
+/*botones naranjas en general, en especial los del navegador*/
+.boton_naranja{
+    background-color: #f4944c;
+    margin-left: 45px;
+    margin-right: 45px;
+    color: black;
+}
+.boton_naranja:hover{
+    background-color: #ee7842;
+}
+/*contenedor de más información acerca de promociones*/
+.cont_informacion{
+    position: relative;
+    width: 95%;
+}
+/*Contenido para obtener más información acerca de promociones*/
+.informacion{
+    background-color: #f8ba89;
+    display: inline-block;
+    padding: 60px 20px;
+    position:relative;
+    bottom:280px;
+}
