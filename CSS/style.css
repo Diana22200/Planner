@@ -36,7 +36,7 @@ nav{
 }
 /*botones en general*/
 .boton{
-    padding: 1px 1.6em;
+    padding: 1px 1.4em;
     margin:4px;
     display: inline-block;
 }
@@ -82,4 +82,52 @@ nav{
     padding: 60px 20px;
     position:relative;
     bottom:280px;
+}
+
+
+/*Principalmente estilos de página "soy una persona natural"*/
+.promocion{
+    width: 20%;
+    padding: 20px;
+    margin: 10px;
+    display: inline-block;
+    background-image:url(https://i.postimg.cc/W4tbw8df/pexels-karolina-grabowska-5625116.jpg);
+    background-size: contain;
+    background-repeat:no-repeat;
+    color: white
+}
+/*formulario del paquete que le interesa*/
+.formulario{
+    background-color: #fcdab5;
+    width: 40%;
+    display: block;
+    padding: 30px;
+    margin:20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/*boton de me interesa*/
+.interes{
+    display: block;
+    color: black;
+    border: black solid 4px;
+    background-color: beige;
+    width: 450px;
+}
+.interes:hover{
+    background-color: rgb(224, 224, 201);
+}
+.interes:active{
+    transform: scale(.95);
+}
+.introduccion{
+    width:75%;
+}
+.izquierda{
+    position:absolute;
+    left:0;
+    top:10px;
+}
+.text_left{
+    text-align: left;
 }
