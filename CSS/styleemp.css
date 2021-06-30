@@ -1,0 +1,117 @@
+/*styles Planner*/
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+	border: none;
+	outline: none;
+}
+*, *::before,*::after{
+    box-sizing: border-box;
+}
+/*El primer color de fondo del body*/
+.fondo1{
+    background-color:#fff7e0;
+}
+/*Margen para el navegador*/
+nav{
+    margin: 10px;
+}
+/*Tamaños de letra*/
+.letra_mediana{
+    font-size: 21px;
+}
+.letra_grande{
+    font-size: 40px;
+}
+.letra_extragrande{
+    font-size: 70px;
+}
+/*centrar en general*/
+.centrar{
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+}
+/*botones en general*/
+.boton{
+    padding: 1px 1.4em;
+    margin:4px;
+    display: inline-block;
+}
+.boton:active {
+    transform: scale(.95);
+}
+
+/*botones naranjas en general, navegador*/
+.boton_naranja{
+    background-color: #f4944c;
+    margin-left: 45px;
+    margin-right: 45px;
+    color: black;
+}
+.boton_naranja:hover{
+    background-color: #ee7842;
+}
+/*contenedor de más información acerca de promociones*/
+.cont_informacion{
+    position: relative;
+    width: 95%;
+}
+/*Contenido para obtener más información acerca de promociones*/
+.informacion{
+    background-color: #f8ba89;
+    display: inline-block;
+    padding: 60px 20px;
+    position:relative;
+    bottom:280px;
+}
+
+
+/*Principalmente estilos de página "soy una empresa"*/
+.promocion{
+    width: 20%;
+    padding: 80px;
+    margin: 50px;
+    display: inline-block;
+    background-image:url(https://i.postimg.cc/W4tbw8df/pexels-karolina-grabowska-5625116.jpg);
+    background-size: contain;
+    background-repeat:no-repeat;
+    color: white
+}
+/*formulario del paquete que le interesa*/
+.formulario{
+    background-color: #fcdab5;
+    width: 40%;
+    display: block;
+    padding: 30px;
+    margin:20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/*boton de me interesa*/
+.interes{
+    display: block;
+    color: black;
+    border: black solid 4px;
+    background-color: beige;
+    width: 450px;
+}
+.interes:hover{
+    background-color: rgb(224, 224, 201);
+}
+.interes:active{
+    transform: scale(.95);
+}
+.introduccion{
+    width:75%;
+}
+.izquierda{
+    position:absolute;
+    left:0;
+    top:10px;
+}
+.text_left{
+    text-align: left;
+}
