@@ -14,16 +14,23 @@
 .fondo1{
     background-color:#fff7e0;
 }
+.fondo2{
+    background-color:#ffebca;
+}
 /*Margen para el navegador*/
 nav{
     margin: 10px;
+}
+/*Resaltar letra*/
+.negrilla{
+    font-weight: 900;
 }
 /*Tamaños de letra*/
 .letra_mediana{
     font-size: 21px;
 }
 .letra_grande{
-    font-size: 40px;
+    font-size: 50px;
 }
 .letra_extragrande{
     font-size: 70px;
@@ -130,4 +137,44 @@ nav{
 }
 .text_left{
     text-align: left;
+}
+.inline_block{
+    display: inline-block;
+}
+
+.cabecera{
+    background-color: #ea681a;
+    padding: 10px;
+}
+.menu_perfil{
+    background-color: #fc9d4b;
+    padding: 20px;
+    width: 20%;
+    height: 543px;
+    float:left;
+    margin: 0;
+}
+.cont_info_perfil{
+    margin-top:20px;
+    margin-left: 130px;
+}
+.boton_naranja2{
+    background-color:#dd5e17;
+    color:white;
+    box-shadow:4px 3px black;
+    margin:15px 0;
+}
+.info_perfil{
+    margin-left: 30px;
+    position: relative;
+    bottom: 185px;
+}
+.logo{
+    position: absolute;
+    right: 500px;
+    left:6px;
+    top: 3px;
+}
+.link{
+    text-decoration:underline;
 }
