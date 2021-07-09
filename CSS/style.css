@@ -234,3 +234,11 @@ nav{
     width: 95%;
     margin: 10px 0px;
 }
+.izquierda2{
+    float: left;
+}
+.atras{
+    background-color: #e35d16;
+    color: white;
+    margin: 25px;
+}
