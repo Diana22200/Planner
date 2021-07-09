@@ -234,9 +234,11 @@ nav{
     width: 95%;
     margin: 10px 0px;
 }
+/*otra forma de poner elemento a la izquierda, ya que los anteriores se sobreponian*/
 .izquierda2{
     float: left;
 }
+/*botón de atras oscuro y con letras blancas*/
 .atras{
     background-color: #e35d16;
     color: white;
