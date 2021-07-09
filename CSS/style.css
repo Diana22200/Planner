@@ -127,25 +127,30 @@ nav{
 .interes:active{
     transform: scale(.95);
 }
+/*Introducción de la página persona natural*/
 .introduccion{
     width:75%;
 }
+/*posicionamiento a la izquierda, en este caso del logo*/
 .izquierda{
     position:absolute;
     left:0;
     top:10px;
 }
+/*posicionamiento a la izquierda del texto*/
 .text_left{
     text-align: left;
 }
+/*Display inline-block*/
 .inline_block{
     display: inline-block;
 }
-
+/*La cabecera que se ve cuando alguien inicia sesión*/
 .cabecera{
     background-color: #ea681a;
     padding: 10px;
 }
+/*El contenedor del menú de navegación cuando se inicia sesión*/
 .menu_perfil{
     background-color: #fc9d4b;
     padding: 20px;
@@ -154,27 +159,70 @@ nav{
     float:left;
     margin: 0;
 }
+/*El contenedor de la información del perfil (instructor)(imagen y lista)*/
 .cont_info_perfil{
     margin-top:20px;
     margin-left: 130px;
 }
+/*Estilo de los botones de navegación cuando se inicia sesión*/
 .boton_naranja2{
     background-color:#dd5e17;
     color:white;
     box-shadow:4px 3px black;
     margin:15px 0;
 }
+/*Información del perfil (lista)*/
 .info_perfil{
     margin-left: 30px;
     position: relative;
     bottom: 185px;
 }
+/*La posición del logo cuando se inicia sesión*/
 .logo{
     position: absolute;
     right: 500px;
     left:6px;
     top: 3px;
 }
+/*el tipico subrayado de los links (ya que se quito al inicio el text-decoration)*/
 .link{
     text-decoration:underline;
+}
+/*El div que contiene cada clase individualmente*/
+.clase{
+    border: 2px black solid;
+    display: inline-block;
+    width: 180px;
+    padding: 10px;
+    background-color: #ffdfb6;
+    margin: 15px;
+}
+/*El contenedor de las clases*/
+.cont_clases{
+    display: flex;
+    justify-content: center;
+}
+/*Este boton se creó para el "Entrar" que hay en las clases,
+ ya que los otros estilos generaban desbordamiento.*/
+.boton_pequenio{
+    color: black;
+    background-color:#fa9d57 ;
+}
+.boton_pequenio:hover{
+    background-color:#f6814a ;
+}
+/*un borde negro*/
+.border{
+    border:black solid 2px;
+}
+/*El nombre de la clase ("clase 1, clase 2")*/
+.clase_titulo{
+    background-color: #f76f21;
+    position: relative;
+    left: -12px;
+    top:-12px;
+    padding: 10px;
+    float:left;
+    width: 180px;
+    margin: 0;
 }
