@@ -26,6 +26,9 @@ nav{
     font-weight: 900;
 }
 /*Tamaños de letra*/
+.letra_pequenia{
+    font-size: 16px;
+}
 .letra_mediana{
     font-size: 21px;
 }
@@ -225,4 +228,9 @@ nav{
     float:left;
     width: 180px;
     margin: 0;
+}
+/*estilo de los campos para ingresar información*/
+.input{
+    width: 95%;
+    margin: 10px 0px;
 }
