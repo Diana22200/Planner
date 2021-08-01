@@ -1,0 +1,250 @@
+/*styles de Planner*/
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+	border: none;
+	outline: none;
+}
+*, *::before,*::after{
+    box-sizing: border-box;
+}
+/*El primer color de fondo del body*/
+.fondo1{
+    background-color:#fff7e0;
+}
+.fondo2{
+    background-color:#ffebca;
+}
+/*Margen para el navegador*/
+nav{
+    margin: 10px;
+}
+/*Resaltar letra*/
+.negrilla{
+    font-weight: 900;
+}
+/*Tamaños de letra*/
+.letra_mediana{
+    font-size: 21px;
+}
+.letra_grande{
+    font-size: 50px;
+}
+.letra_extragrande{
+    font-size: 70px;
+}
+/*centrar en general*/
+.centrar{
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+}
+/*botones en general*/
+.boton{
+    padding: 1px 1.4em;
+    margin:4px;
+    display: inline-block;
+}
+.boton:active {
+    transform: scale(.95);
+}
+
+/*Estilos principalmente de index.html*/
+
+/*Contenedor del eslogan*/
+.cont_eslogan{
+    position: relative;
+    width: 65%;
+}
+/*Parte página index de eslogan*/
+.eslogan{
+    background-color: #fad39a;
+    line-height: 210px;
+    width: 70%;
+    position: absolute;
+    bottom:150px;
+    display:inline-block;
+}
+/*botones naranjas en general, en especial los del navegador*/
+.boton_naranja{
+    background-color: #f4944c;
+    margin-left: 45px;
+    margin-right: 45px;
+    color: black;
+}
+.boton_naranja:hover{
+    background-color: #ee7842;
+}
+/*contenedor de más información acerca de promociones*/
+.cont_informacion{
+    position: relative;
+    width: 95%;
+}
+/*Contenido para obtener más información acerca de promociones*/
+.informacion{
+    background-color: #f8ba89;
+    display: inline-block;
+    padding: 60px 20px;
+    position:relative;
+    bottom:280px;
+}
+
+
+/*Principalmente estilos de página "soy una persona natural"*/
+.promocion{
+    width: 20%;
+    padding: 20px;
+    margin: 10px;
+    display: inline-block;
+    background-image:url(https://i.postimg.cc/W4tbw8df/pexels-karolina-grabowska-5625116.jpg);
+    background-size: contain;
+    background-repeat:no-repeat;
+    color: white
+}
+/*formulario del paquete que le interesa*/
+.formulario{
+    background-color: #fcdab5;
+    width: 40%;
+    display: block;
+    padding: 30px;
+    margin:20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/*boton de me interesa*/
+.interes{
+    display: block;
+    color: black;
+    border: black solid 4px;
+    background-color: beige;
+    width: 450px;
+}
+.interes:hover{
+    background-color: rgb(224, 224, 201);
+}
+.interes:active{
+    transform: scale(.95);
+}
+.introduccion{
+    width:75%;
+}
+.izquierda{
+    position:absolute;
+    left:0;
+    top:10px;
+}
+.text_left{
+    text-align: left;
+}
+.inline_block{
+    display: inline-block;
+}
+
+.cabecera{
+    background-color: #ea681a;
+    padding: 10px;
+}
+.menu_perfil{
+    background-color: #fc9d4b;
+    padding: 20px;
+    width: 20%;
+    height: 543px;
+    float:left;
+    margin: 0;
+}
+.cont_info_perfil{
+    margin-top:20px;
+    margin-left: 130px;
+}
+.boton_naranja2{
+    background-color:#dd5e17;
+    color:white;
+    box-shadow:4px 3px black;
+    margin:15px 0;
+}
+.info_perfil{
+    margin-left: 30px;
+    position: relative;
+    bottom: 85px;
+}
+.logo{
+    position: absolute;
+    right: 500px;
+    left:6px;
+    top: 3px;
+}
+.link{
+    text-decoration:underline;
+}
+
+/*Estilos tabla del Cronograma*/
+
+#tabla {
+    border-collapse: collapse;
+}
+tbody {
+    background: rgb(255, 243, 243);
+}
+tbody tr {
+    height: 40px
+}
+td, th {
+    border: black 1px solid;
+}
+.clase-tabla {
+    float: left;
+}
+
+/*Tablas clases estudiante*/
+
+.cont_cla-est{
+    margin-top:20px;
+    margin-left: 100px;
+}
+#tabla-cl-es {
+    border-collapse: collapse;
+}
+#clase-cl-es {
+    background: #fad8ad;
+}
+#clase-cl-es tr {
+    height: 40px;
+}
+#clase-cl-es tr td, #clase-cl-es th {
+    border: none;
+}
+.button {
+    background-color: #f76f21;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+}
+#tabla1-cl-est {
+    float: left;
+    display: inline;
+    padding-left: 40px;
+}
+/*botón de atras oscuro y con letras blancas*/
+.atras{
+    background-color: #e35d16;
+    color: white;
+    margin: 25px;
+}
+/*Alinear el boton de Atrás con el cuadro del calendario*/
+.calen-cla{
+    margin-left: 20px;
+    float: left;
+}
+/*estilo de los campos para ingresar información*/
+textarea{
+	width:100%;
+	height:100px;
+	border:1px solid #f6f6f6;
+	border-radius:3px;
+	background-color:#f6f6f6;			
+	margin:8px 0;
+	/*resize: vertical | horizontal | none | both*/
+	resize:none;
+	display:block;
+}
