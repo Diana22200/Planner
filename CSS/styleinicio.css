@@ -1,6 +1,13 @@
+/*Normalización*/
 *{
-    margin: 0;
-    padding: 0;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+	border: none;
+	outline: none;
+}
+*, *::before,*::after{
     box-sizing: border-box;
 }
 body{
@@ -16,8 +23,7 @@ body{
 	margin-top: 160px;
 	font-family: 'arial';
 	color: black;
-    border-radius: 0%, color: black;
-	
+    border-radius: 0%;	
 }
 
 h2{
@@ -67,4 +73,19 @@ div{
     /*display: inline-block;*/
     /*display: inline-table;*/
     text-align: end;
+}
+.boton_naranja{
+    display:inline-block;
+    background-color: #f4944c;
+    margin: 10px 25px;
+    color: black;
+}
+.titulo{
+    margin: 20px;
+}
+.tabla{
+    margin: 20px auto;
+}
+.boton:active {
+    transform: scale(.95);
 }
