@@ -1,0 +1,101 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+	border: none;
+	outline: none;
+}
+*, *::before,*::after{
+    box-sizing: border-box;
+}
+/*El primer color de fondo del body*/
+.fondo1{
+    background-color:#fff7e0;
+}
+/*Margen para el navegador*/
+nav{
+    margin: 10px;
+}
+.informacion{
+    background-color: #f8ba89;
+    display: inline-block;
+    padding: 60px 20px;
+    position:relative;
+    bottom:280px;
+}
+.boton{
+    padding: 1px 1.4em;
+    margin: 10px;
+    display: inline-block;
+}
+.boton:active {
+    transform: scale(.95);
+}
+/*Tamaños de letra*/
+.letra_mediana{
+    font-size: 21px;
+}
+.letra_grande{
+    font-size: 40px;
+}
+.letra_extragrande{
+    font-size: 70px;
+}
+/*centrar en general*/
+.centrar{
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+}
+.boton_naranja{
+    background-color: #f4944c;
+    margin-left: 20px;
+    margin-right: 20px;
+    color: black;
+}
+.boton_naranja:hover{
+    background-color: #ee7842;
+}
+.Empresa{
+    width: 390px;
+    height: 500px;
+    padding: 5px;
+    margin: 15px;
+    display: inline-block;
+    background-image:url(https://i.postimg.cc/4NFQ8Szh/pexels-sora-shimazaki-5668775.jpg);
+    background-size: contain;
+    background-repeat:no-repeat;
+    position: relative;
+ 
+    
+
+}
+.Natural{
+    width: 390px;
+    height: 500px;
+    margin: 15px ;
+    padding: 5px;
+    display: inline-block;
+    background-image:url(https://i.postimg.cc/Znwxzf22/pexels-marcelo-chagas-6930504.jpg);
+    background-size: contain;
+    background-repeat:no-repeat;
+    position:relative;
+}
+.contenido{
+    
+    display:inline-block;
+    }
+    .izquierda{
+        left:0;
+        
+    }
+    .text_left{
+        text-align: left;
+    }
+.abajo{
+    position:absolute;
+    left:60px;
+    top:400px;
+
+}
