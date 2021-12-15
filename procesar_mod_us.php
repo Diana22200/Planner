@@ -1,5 +1,5 @@
 <?php
-include ("database.php");
+include_once ("database.php");
 $names = $_POST['names'];
 $surname = $_POST['surname'];
 $tipo_doc = $_POST['acronym_doc'];
@@ -14,7 +14,7 @@ $query2->execute();
 $row = $query2->fetch(PDO::FETCH_ASSOC);
 $id_doc = $row['id_do'];
 echo $row['id_do'];
-$db = new Database();
+
 
 //Modificar usuario
 $mod_us = "UPDATE surrogate_keys.user SET num_doc = $num_doc, documentid = $id_doc, status = '$status', names = '$names', surname = '$surname' WHERE id = $id";
