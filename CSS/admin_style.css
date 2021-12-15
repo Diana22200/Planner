@@ -1,0 +1,94 @@
+/*Normalización*/
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+	border: none;
+	outline: none;
+}
+*, *::before,*::after{
+    box-sizing: border-box;
+}
+body{
+    background-color:rgba(245, 240, 201, 0.979);
+}
+
+.tabla{
+    display: block;
+    width: 500px;
+	background: rgba(247, 203, 162, 0.884);
+    border-style: solid;
+	padding: 50px;
+	margin: auto;
+	margin-top: 20px;
+	font-family: 'arial';
+	color: black;
+    border-radius: 0%,;
+	
+}
+
+h2{
+    display: block;
+    font-size: 60px;
+    text-align: center;
+    margin: 20px auto;}
+
+.button{
+    width:143px;
+    margin-top:10px;
+    margin-left:120px;
+    cursor:pointer;
+    border-style: solid;
+	background: #db905e;
+	color: rgb(14, 13, 13);
+	font-size: 15px;
+    padding: 5px 5px;
+    
+}
+.button:hover{
+    background-color: #ee7842;
+}
+.button:active{
+    transform: scale(.95);
+}
+input{
+    position: relative;
+    width: 200px;
+    margin-bottom: 10px;
+    border-style: inset;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    cursor: pointer;
+}
+select{
+    width: 200px;
+    margin-bottom: 10px;
+    border-style: inset;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    cursor: pointer;
+    
+}
+
+div{
+    /*display: inline-block;*/
+    /*display: inline-table;*/
+    text-align: right;
+}
+.boton_pequenio{
+    display: inline-block;
+    color: black;
+    background-color:#fa9d57 ;
+}
+.boton_pequenio:hover{
+    background-color:#f6814a ;
+}
+.boton{
+    padding: 1px 1.4em;
+    margin:4px;
+    display: inline-block;
+}
+.boton:active {
+    transform: scale(.95);
+}
