@@ -1,6 +1,5 @@
 <?php
 include_once 'database.php';
-
 session_start();
 
 if(isset($_GET['cerrar_sesion'])){
@@ -13,7 +12,7 @@ if(isset($_SESSION['rol'])){
     switch($_SESSION['rol']){
         //administrador
         case 1:
-            header('location:perfil_estudiante.html');
+            header('location:perfil_admin.php');
         break;
         //Aprendiz
         case 2:
@@ -32,7 +31,8 @@ if(isset($_POST['tipo_doc']) && isset($_POST['num_doc'])&& isset($_POST['passwor
     $tipo_doc = $_POST['tipo_doc'];
     $num_doc = $_POST['num_doc'];
     $password = $_POST['password'];
-
+    $_SESSION['numero_docu']=$_POST['num_doc'];
+    $_SESSION['tipo_docu'] =$_POST['tipo_doc'];
     $db = new Database();
     $query = $db->connect()->prepare('SELECT * FROM user INNER JOIN document ON user.documentid = document.id INNER JOIN role ON role.id = user.Roleid WHERE user.num_doc = :num_doc AND user.password = :password AND document.acronym_doc = :tipo_doc ');    $query->execute(['tipo_doc' => $tipo_doc, 'num_doc' => $num_doc, 'password' => $password]);
     $row = $query->fetch(PDO::FETCH_NUM);
@@ -43,7 +43,7 @@ if(isset($_POST['tipo_doc']) && isset($_POST['num_doc'])&& isset($_POST['passwor
         switch($_SESSION['rol']){
             //administrador
             case 1:
-                header('location:perfil_estudiante.html');
+                header('location:perfil_admin.php');
             break;
             //Aprendiz
             case 2:
