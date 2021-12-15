@@ -6,19 +6,22 @@ $usuarios = "SELECT acronym_doc, num_doc, names, surname, user.id, type FROM use
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="CSS/style_elimi.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eliminar usuario</title>
+    <link rel="stylesheet" href="CSS/modi_style.css">
+    <!-- Compiled and minified CSS -->
+    
+
+    <title>Modiicar usuariof</title>
 </head>
 <body class="fondo2">
     <!--Cabecera-->
     <header class="cabecera centrar">
-    <img class="logo" src="https://i.postimg.cc/KzWPXR4b/logo-planner-2-1.png" width="90px">
-    <h1 class="inline_block letra_grande">Eliminar Usuario</h1>
-    </header>
-    <!--Menú de Cronograma-->
-    <nav class="inline_block menu_perfil letra_mediana">
+        <img class="logo" src="https://i.postimg.cc/KzWPXR4b/logo-planner-2-1.png" width="90px">
+        <h1 class="inline_block letra_grande">Modificar Usuario</h1>
+        </header>
+    <nav class="inline_block letra_mediana">
+        <section class="inline_block">
             <div class="columna_izquierda">
                 <input class="botton" type="submit" value="Mi perfil">
                 <input class="botton" type="submit" value="Eliminar usuarios">
@@ -27,8 +30,12 @@ $usuarios = "SELECT acronym_doc, num_doc, names, surname, user.id, type FROM use
                 <input class="botton" type="submit" value="Quejas y peticiones">
                 <input class="botton" type="submit" value="Cerrar sesión">
             </div>
-    </nav>
-    <!--Información del Cronograma-->
+        </section>
+        </nav>
+    <div class="seach">
+        <input class="buscar inline_block" type="search" name="" placeholder="Buscar">
+        <input class="botton" type="submit" value="Asignar ficha">
+    </div>
     <main  class="inline_block cont_info_perfil">
         <table id="tabla">
             <tbody>
@@ -38,7 +45,7 @@ $usuarios = "SELECT acronym_doc, num_doc, names, surname, user.id, type FROM use
                     <th colspan="1" style="padding: 6px; text-align: center;"><strong>NOMBRE</strong></th>
                     <th colspan="1" style="padding: 6px; text-align: center;"><strong>APELLIDO</strong></th>
                     <th colspan="1" style="padding: 6px; text-align: center;"><strong>ROL</strong></th>
-                    <th colspan="1" style="padding: 6px; text-align: center;"><strong>ELIMINAR</strong></th>
+                    <th colspan="1" style="padding: 6px; text-align: center;"><strong>MODIFICAR</strong></th>
                  </tr>
                  <?php    $db = new Database();
                         $query = $db->connect()->prepare($usuarios);    
@@ -51,13 +58,12 @@ $usuarios = "SELECT acronym_doc, num_doc, names, surname, user.id, type FROM use
                 <td width="150px" style="padding: 6px; text-align: center;"><?php echo $row["names"];?></td>
                 <td width="150px" style="padding: 6px; text-align: center;"><?php echo $row["surname"];?></td>
                 <td width="150px" style="padding: 6px; text-align: center;"><?php echo $row["type"];?></td>
-                <td width="150px" style="padding: 6px; text-align: center;"><a href="procesar_eli_us.php?id=<?php echo $row["id"];?>" class="table_del">Eliminar</a></td>
+                <td width="150px" style="padding: 6px; text-align: center;"><a href="actu_mod_user.php?id=<?php echo $row["id"];?>" class="table_del">Modificar</a></td>
             </tr>
             <?php 
             }?>
             </tbody>
         </table>
     </main>
-    <script src= "eli_usuario_conf.js"></script>
 </body>
 </html>

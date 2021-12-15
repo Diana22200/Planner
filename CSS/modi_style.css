@@ -1,0 +1,118 @@
+
+
+
+/*styles de Planner*/
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+	border: none;
+	outline: none;
+}
+*, *::before,*::after{
+    box-sizing: border-box;
+}
+
+.columna_izquierda{
+    display: inline-block;
+    width: 250px;
+    height: 882px;
+    padding: 100px 40px;
+    background-color: rgba(233, 139, 76, 0.911);
+    
+}
+form{
+    display: inline-block;
+}
+.botton{
+    width: 180px;
+    border-style: solid;
+    border-radius: 7px;
+    border-color: rgb(0, 0, 0);
+    background-color: rgb(248, 95, 7);
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    padding: 10px;
+    color: #fff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    cursor: pointer;
+}
+.botton:hover{
+    background-color: rgb(238, 62, 9);
+}
+.botton:active{
+    transform: scale(.95);
+}
+.seach{
+    position: absolute;
+    left: 300px;
+    top: 90px;
+    display: inline-block;
+}
+.buscar{
+    height: 30px;
+    width: 800px;
+    border-style: solid;
+    border-radius: 7px;
+    border-color: black;
+    margin-top: 10px;
+}
+.tabla{
+    display: inline-block;
+    margin: 5px 5px;
+    position: absolute;
+}
+th, td{
+    border:solid 1px black;
+    border-style: solid;
+}
+a{
+    text-decoration: none;
+    color: black
+}
+/*centrar en general*/
+.centrar{
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+}
+.cabecera{     
+    background-color: #ea681a;     
+    padding: 10px; 
+}
+/*Display inline-block*/
+.inline_block{
+    display: inline-block;
+}
+.letra_grande{
+    font-size: 50px;
+}
+.logo{
+    position: absolute;
+    right: 500px;
+    left:6px;
+    top: 3px;
+}
+.fondo2{
+    background-color:#ffebca;
+}
+tbody {
+    background: white;
+}
+table{
+    display: inline-block;
+    /*display: inline-flex;*/
+    text-align: left;
+    table-layout: auto;
+    border-collapse: collapse;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    position: absolute;
+    left: 300px;
+    top: 180px;
+}
+.hide{
+    visibility: hidden;
+}
