@@ -27,7 +27,7 @@ $name_doc = $_SESSION['tipo_docu'];
         <li><a href="perfil_estudiante.html" class="boton boton_naranja2">Mi perfil</a></li>
         <li><a href="nombredoc.html" class="boton_naranja2  boton">Clases</a></li>
         <li><a href="nombredoc.html" class="boton_naranja2  boton">Cronograma</a></li>
-        <li><a href="nombredoc.html" class="boton_naranja2  boton">Quejas y peticiones</a></li>
+        <li><a href="Quejas_pet_admin.php" class="boton_naranja2  boton">Quejas y peticiones</a></li>
         <li><a href="nombredoc.html" class="boton_naranja2  boton">Añadir clase</a></li>
         <li><a href="iniciar_sesion.php?cerrar_sesion=1" class="boton_naranja2  boton">Cerrar sesión</a></li>
         </ul>

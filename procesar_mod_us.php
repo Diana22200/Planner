@@ -7,7 +7,7 @@ $status = $_POST['status'];
 $num_doc = $_POST['num_doc'];
 $id =$_POST['id'];
 
-//Conseguir id dle documento
+//Conseguir id del documento
 $db2 = new Database();
 $query2 = $db2->connect()->prepare("SELECT MIN(document.id) as id_do FROM surrogate_keys.document WHERE acronym_doc= '$tipo_doc'");    
 $query2->execute();
