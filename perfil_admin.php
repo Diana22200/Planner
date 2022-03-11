@@ -5,7 +5,7 @@ $num_doc = $_SESSION['numero_docu'];
 $name_doc = $_SESSION['tipo_docu'];
     $admin = "SELECT names, surname, email, url_prof_pic FROM surrogate_keys.user 
     INNER JOIN surrogate_keys.document ON user.documentid = document.id WHERE num_doc = $num_doc AND acronym_doc = '$name_doc'";    
-?>
+        ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>

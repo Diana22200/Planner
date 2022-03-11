@@ -11,7 +11,7 @@ $name_doc = $_SESSION['tipo_docu'];
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/estilosmodificar.css">
+    <link rel="stylesheet" href="CSS/stylosquejas.css">
     <title>Cronograma General</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,19 +19,19 @@ $name_doc = $_SESSION['tipo_docu'];
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Poppins:wght@500&display=swap" rel="stylesheet">
 </head>
-<header>
-    <div class="cabecera">
-        <a id="logo" target="_blank"><img src="https://i.postimg.cc/50H7jWw1/logo-planner-2-1.png"></a>
-        <h1>Cronograma general</h1>
-    </div>
-</header>
+    <!--Cabecera-->
+    <header class="cabecera centrar">
+    <img class="logo" src="https://i.postimg.cc/Gp03GJQR/LOGOSENApequenio.png">
+    <h1 class="inline_block letra_grande">Crononograma general</h1>
+    </header>
 
 
- 
-<body>
-    <section>
-    <div class="contenedor">
-    <table class="tabla">
+
+<main  class="inline_block cont_info_perfil">
+        <div class="msg">
+        <table id="tabla">
+            <tbody>
+                <tr style="height: 70px;">
                     <th><strong>TIPO</strong></th>
                     <th><strong>TÍTULO</strong></th>
                     <th><strong>FECHA LÍMITE </strong></th>
@@ -65,17 +65,16 @@ $name_doc = $_SESSION['tipo_docu'];
             </div>
     </main>
     
-    <aside>
-        <div class="contenedor_menu">
-            <ul>
-                
-       <li> <a href ="perfil_estudiante.php" class="boton boton_naranja izquierda"  >Mi perfil</a></li>
-       <li>  <a href= "clases_estudiante.php"class="boton boton_naranja izquierda" > Clases</a> </li> 
-       <li>  <a href= "#"     class="boton boton_naranja izquierda" >Cronograma</a> </li> 
-       <li> <a href ="quejas_y_peticiones_estudiante.php"class="boton boton_naranja izquierda" >Quejas y peticiones</a> </li> 
-       <li> <a href ="#"  class="boton boton_naranja izquierda" >Cerrar sesion</a> </li> 
+       <!--Menú de navegación estudiante-->
+       <nav class="inline_block menu_perfil letra_mediana">"iniciar_sesion.php?cerrar_sesion=1"
+        <ul>
+        <li><a href="perfil_estudiante.php" class="boton boton_naranja2">Mi perfil</a></li>
+        <li><a href="clases_estudiante.html" class="boton_naranja2  boton">Clases</a></li>
+        <li><a href="cronograma_general.php" class="boton_naranja2  boton">Cronograma</a></li>
+        <li><a href="Quejas_pet_admin.php" class="boton_naranja2  boton">Quejas y peticiones</a></li>
+        <li><a href="anadir_clase.html" class="boton_naranja2  boton">Añadir clase</a></li>
+        <li><a href="iniciar_sesion.php?cerrar_sesion=1" class="boton_naranja2  boton">Cerrar sesión</a></li>
         </ul>
-        </div>
-    </aside>
+    </nav>
 </body>
 </html>

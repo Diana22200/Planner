@@ -6,7 +6,11 @@ if(isset($_GET['cerrar_sesion'])){
 session_unset();
 
 session_destroy();
+header('location:iniciar_sesion.php');
+
 }
+
+
 
 if(isset($_SESSION['rol'])){
     switch($_SESSION['rol']){
@@ -16,7 +20,7 @@ if(isset($_SESSION['rol'])){
         break;
         //Aprendiz
         case 2:
-            header('location:perfil_estudiante.html');
+            header('location:perfil_estudiante.php');
 
         break;
         //Instructor
@@ -47,12 +51,12 @@ if(isset($_POST['tipo_doc']) && isset($_POST['num_doc'])&& isset($_POST['passwor
             break;
             //Aprendiz
             case 2:
-                header('location:perfil_estudiante.html');
+                header('location:perfil_estudiante.php');
     
             break;
             //Instructor
             case 3:
-                header('location:perfil_instructor.html');
+                header('location:perfil_instructor.php');
             break;
             default:
         }
