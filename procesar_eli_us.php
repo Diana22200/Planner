@@ -42,7 +42,7 @@ $query_us = $db_us->connect()->prepare($eliminar_us);
 $query_us->execute();
 
 if($query_us){
-    echo"<script>alert('El usuario se eliminó correctamente'); window.history.go(-1);</script>";
+    echo"<script>alert('El usuario se eliminó correctamente'); window.history.go(-2);</script>";
     header("Location: eliminar_usuario.php");
 }else{
     echo"<script>alert('No se pudo eliminar el usuario'); window.history.go(-1);</script>";

@@ -24,9 +24,9 @@ $query = $db->connect()->prepare($mod_us);
 $query->execute();
 
 if($query){
-    echo"<script>alert('Se añadió al administrador correctamente'); window.history.go(-1);</script>";
+    echo"<script>alert('Se modifico el usuario correctamente'); window.history.go(-2);</script>";
     header:location:
 }else{
-    echo"<script>alert('No se pudo actualizar el registro.'); window.history.go(-1);</script>";
+    echo"<script>alert('No se pudo modificar el registro.'); window.history.go(-1);</script>";
 }
 ?>
