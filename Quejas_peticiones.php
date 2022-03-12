@@ -26,7 +26,7 @@ $conexion=new mysqli($server, $user, $pass, $database);
     <!--Menú de Cronograma-->
     <nav class="inline_block menu_perfil letra_mediana">
         <ul>
-        <li><a href="" class="boton_naranja2  boton">Atrás</a></li>
+        <li><a href="perfil_instructor.php" class="boton_naranja2  boton">Atrás</a></li>
         <li><a href="" class="boton_naranja2  boton">Bandeja de entrada</a>
           <li><a href="Quejas_peticiones_remitente.php" class="boton_naranja2  boton">Bandeja de salida</a>
             <li><a href="Enviar_mensaje.php" class="boton_naranja2  boton">Enviar mensaje</a></li>
