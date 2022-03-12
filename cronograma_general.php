@@ -66,7 +66,7 @@ $name_doc = $_SESSION['tipo_docu'];
     </main>
     
        <!--Menú de navegación estudiante-->
-       <nav class="inline_block menu_perfil letra_mediana">"iniciar_sesion.php?cerrar_sesion=1"
+       <nav> <!--class="inline_block menu_perfil letra_mediana">"iniciar_sesion.php?cerrar_sesion=1"-->
         <ul>
         <li><a href="perfil_estudiante.php" class="boton boton_naranja2">Mi perfil</a></li>
         <li><a href="clases_estudiante.html" class="boton_naranja2  boton">Clases</a></li>

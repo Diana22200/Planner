@@ -1,3 +1,11 @@
+<?php
+include 'database.php';
+session_start();
+$num_doc = $_SESSION['numero_docu'];
+$name_doc = $_SESSION['tipo_docu'];
+    $admin = "SELECT names, surname, email, url_prof_pic FROM surrogate_keys.user 
+    INNER JOIN surrogate_keys.document ON user.documentid = document.id WHERE num_doc = $num_doc AND acronym_doc = '$name_doc'";    
+        ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -25,16 +33,25 @@
         </ul>
     </nav>
     <!--Información del perfil del instructor-->
-    <main  class="inline_block cont_info_perfil">
-        <img class="inline_block" src="https://i.postimg.cc/cJfV5RTs/se-or-calvo.jpg">
+        <main  class="inline_block cont_info_perfil">
+    <?php     $db = new Database();
+                        $query = $db->connect()->prepare($admin);    
+                        $query->execute();
+                 while ($fila = $query->fetch(PDO::FETCH_ASSOC)){
+
+?>
+        <img alt="Foto de perfil" width="300px" class="inline_block" src="<?php echo $fila["url_prof_pic"];?>">
         <ul class="inline_block letra_mediana info_perfil">
-            <li><span class="negrilla">Nombre:</span>Juan Ramírez</li>
-            <li><span class="negrilla">Correo:</span>ejemplo@misena.edu.co</li>
-            <li><span class="negrilla">Clases:</span></li>
-            <li><span class="negrilla">Número de documento:</span></li>
-            <li><span class="negrilla">Tipo de documento:</span></li>
+            <li><span class="negrilla">Tipo de documento:</span><?php echo $_SESSION['tipo_docu'];?></li>
+            <li><span class="negrilla">Número de documento:</span><?php echo $_SESSION['numero_docu'];?></li>
+            <li><span class="negrilla">Nombre:</span><?php echo $fila["names"];?></li>
+            <li><span class="negrilla">Apellido:</span><?php echo $fila["surname"];?></li>
+            <li><span class="negrilla">Correo:</span><?php echo $fila["email"];?></li>
+            <!--<li><span class="negrilla">Clases:</span><?php echo $fila["code"];?></li>-->           
             <li><a href="nombredoc.html" class="link">Cambiar Datos</a></li>
         </ul>
+        <?php 
+            }?>
     </main>
 </body>
 </html>
