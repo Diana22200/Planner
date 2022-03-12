@@ -24,11 +24,11 @@ $name_doc = $_SESSION['tipo_docu'];
     <!--Menú de navegación estudiante-->
     <nav class="inline_block menu_perfil letra_mediana">
         <ul>
-        <li><a href="perfil_estudiante.html" class="boton boton_naranja2">Mi perfil</a></li>
-        <li><a href="nombredoc.html" class="boton_naranja2  boton">Clases</a></li>
-        <li><a href="nombredoc.html" class="boton_naranja2  boton">Cronograma</a></li>
+        <li><a href="perfil_admin.php" class="boton boton_naranja2">Mi perfil</a></li>
+        <li><a href="eliminar_usuario.php" class="boton_naranja2  boton">Eliminar usuario</a></li>
+        <li><a href="crear_admin.php" class="boton_naranja2  boton">Crear administrador</a></li>
+        <li><a href="mod_usuario.php" class="boton_naranja2  boton">Modificar usuario</a></li>
         <li><a href="Quejas_pet_admin.php" class="boton_naranja2  boton">Quejas y peticiones</a></li>
-        <li><a href="nombredoc.html" class="boton_naranja2  boton">Añadir clase</a></li>
         <li><a href="iniciar_sesion.php?cerrar_sesion=1" class="boton_naranja2  boton">Cerrar sesión</a></li>
         </ul>
     </nav>

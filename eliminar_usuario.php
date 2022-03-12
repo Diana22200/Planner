@@ -6,7 +6,7 @@ $usuarios = "SELECT acronym_doc, num_doc, names, surname, user.id, type FROM use
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="CSS/style_elimi.css">
+    <link rel="stylesheet" href="CSS/modi_style.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eliminar usuario</title>
@@ -20,12 +20,12 @@ $usuarios = "SELECT acronym_doc, num_doc, names, surname, user.id, type FROM use
     <!--Menú de Cronograma-->
     <nav class="inline_block menu_perfil letra_mediana">
             <div class="columna_izquierda">
-                <input class="botton" type="submit" value="Mi perfil">
-                <input class="botton" type="submit" value="Eliminar usuarios">
-                <input class="botton" type="submit" value="Crear administrador">
-                <input class="botton" type="submit" value="Modificar usuarios">
-                <input class="botton" type="submit" value="Quejas y peticiones">
-                <input class="botton" type="submit" value="Cerrar sesión">
+            <li><a href="perfil_admin.php" class="botton">Mi perfil</a></li>
+            <li><a href="eliminar_usuario.php" class="botton">Eliminar usuario</a></li>
+            <li><a href="crear_admin.php" class="botton">Crear administrador</a></li>
+            <li><a href="mod_usuario.php" class="botton">Modificar usuario</a></li>
+            <li><a href="Quejas_pet_admin.php" class="botton">Quejas y peticiones</a></li>
+            <li><a href="iniciar_sesion.php?cerrar_sesion=1" class="botton">Cerrar sesión</a></li>
             </div>
     </nav>
     <!--Información del Cronograma-->

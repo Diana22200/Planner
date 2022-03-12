@@ -37,9 +37,9 @@ WHERE user_message.Userid = $id_user AND user_message.situation = 'Recibido'";
     <nav class="inline_block menu_perfil letra_mediana">
         <ul>
         <li><a href="perfil_admin.php" class="boton_naranja2  boton" >Atrás</a></li>
-        <li><a href="nombredoc.html" class="boton_naranja2  boton">Bandeja de entrada</a>
+        <li><a href="Qeujas_pet_admin.php" class="boton_naranja2  boton">Bandeja de entrada</a>
           <li><a href="nombredoc.html" class="boton_naranja2  boton">Bandeja de salida</a>
-            <li><a href="nombredoc.html" class="boton_naranja2  boton">Enviar mensaje</a></li>
+            <li><a href="Enviar_mensaje.php" class="boton_naranja2  boton">Enviar mensaje</a></li>
         </ul>
     </nav>
     <!--Información del Cronograma-->

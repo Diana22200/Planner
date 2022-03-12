@@ -9,7 +9,7 @@
 </head>
 <body>      
     <!--Se DEBE poner el perfil_administrador-->
-    <a class= "boton boton_pequenio" href="">Atrás</a>
+    <a class= "boton boton_pequenio" href="perfil_admin.php">Atrás</a>
     <h2>Crear administrador</h2>
     <form class="tabla"  action="procesar_crear_admin.php"  method="POST">
             <div>Nombres: <input name="name" type="text" placeholder="Ingrese nombres"></div>

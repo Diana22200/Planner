@@ -12,7 +12,7 @@ $usuarios = "SELECT acronym_doc, num_doc, names, surname, user.id, type FROM use
     <!-- Compiled and minified CSS -->
     
 
-    <title>Modiicar usuariof</title>
+    <title>Modificar usuario</title>
 </head>
 <body class="fondo2">
     <!--Cabecera-->
@@ -23,12 +23,12 @@ $usuarios = "SELECT acronym_doc, num_doc, names, surname, user.id, type FROM use
     <nav class="inline_block letra_mediana">
         <section class="inline_block">
             <div class="columna_izquierda">
-                <input class="botton" type="submit" value="Mi perfil">
-                <input class="botton" type="submit" value="Eliminar usuarios">
-                <input class="botton" type="submit" value="Crear administrador">
-                <input class="botton" type="submit" value="Modificar usuarios">
-                <input class="botton" type="submit" value="Quejas y peticiones">
-                <input class="botton" type="submit" value="Cerrar sesión">
+            <li><a href="perfil_admin.php" class="botton">Mi perfil</a></li>
+            <li><a href="eliminar_usuario.php" class="botton">Eliminar usuario</a></li>
+            <li><a href="crear_admin.php" class="botton">Crear administrador</a></li>
+            <li><a href="mod_usuario.php" class="botton">Modificar usuario</a></li>
+            <li><a href="Quejas_pet_admin.php" class="botton">Quejas y peticiones</a></li>
+            <li><a href="iniciar_sesion.php?cerrar_sesion=1" class="botton">Cerrar sesión</a></li>
             </div>
         </section>
         </nav>
