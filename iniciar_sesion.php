@@ -25,7 +25,7 @@ if(isset($_SESSION['rol'])){
         break;
         //Instructor
         case 3:
-            header('location:perfil_instructor.html');
+            header('location:perfil_instructor.php');
         break;
         default:
     }
