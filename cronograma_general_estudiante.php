@@ -70,9 +70,9 @@ $name_doc = $_SESSION['tipo_docu'];
         <ul>
         <li><a href="perfil_estudiante.php" class="boton boton_naranja2">Mi perfil</a></li>
         <li><a href="clases_estudiante.html" class="boton_naranja2  boton">Clases</a></li>
-        <li><a href="cronograma_general.php" class="boton_naranja2  boton">Cronograma</a></li>
-        <li><a href="Quejas_pet_admin.php" class="boton_naranja2  boton">Quejas y peticiones</a></li>
-        <li><a href="anadir_clase.html" class="boton_naranja2  boton">Añadir clase</a></li>
+        <li><a href="cronograma_general_estudiante.php" class="boton_naranja2  boton">Cronograma</a></li>
+        <li><a href="Quejas_pet_estudiante.php" class="boton_naranja2  boton">Quejas y peticiones</a></li>
+        <li><a href="añadir_clase_estudiante.html" class="boton_naranja2  boton">Añadir clase</a></li>
         <li><a href="iniciar_sesion.php?cerrar_sesion=1" class="boton_naranja2  boton">Cerrar sesión</a></li>
         </ul>
     </nav>
