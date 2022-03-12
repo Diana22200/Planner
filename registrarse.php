@@ -14,7 +14,7 @@
     <form class="tabla"  action="procesar_registrar.php"  method="POST">
             <div>Nombres: <input name="name" type="text" placeholder="Ingrese nombres"></div>
             <div>Apellidos: <input name="surname" type="text" placeholder="Ingrese apellidos"></div>
-            <div>Tipo de documento: 
+            <div>Rol: 
                     <select class="select" name="Roleid" id="">
                     <option value="2">Estudiante</option>
                     <option value="3">Instructor</option>
