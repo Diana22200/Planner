@@ -48,7 +48,7 @@ $query1->execute();
                 while ($fila = $query1->fetch(PDO::FETCH_ASSOC)){
                     //Se hace la consulta para averiguar
                     $course= $fila["code"];
-                    $var_2="SELECT names, surname,`class`.`code`, program_name FROM surrogate_keys.user  
+                    $var_2="SELECT names, surname,`class`.`code`,class.id, program_name FROM surrogate_keys.user  
                     INNER JOIN surrogate_keys.document ON user.documentid = document.id 
                     INNER JOIN surrogate_keys.user_class ON user_class.Userid = user.id 
                     INNER JOIN surrogate_keys.class ON user_class.classid = class.id 
@@ -56,7 +56,7 @@ $query1->execute();
                     INNER JOIN surrogate_keys.course ON course_class.id_course = course.id
                     INNER JOIN surrogate_keys.mode ON course.Modeid = mode.id  
                     WHERE `course`.`code`=$course;";
-                    echo($fila["code"]);
+                    //echo($fila["code"]);
                 $db = new Database();
                         $query = $db->connect()->prepare($var_2);
                         $query->execute();
@@ -65,10 +65,11 @@ $query1->execute();
 ?>
        
         <ul class="inline_block letra_mediana info_perfil">
+        <li><span class="negrilla">Clase </span><?php echo $fila["id"];?></li>
             <li><span class="negrilla">Nombre Profesor:</span><?php echo $fila["names"];?></li>
             <li><span class="negrilla">Apellido Profesor:</span><?php echo $fila["surname"];?></li>
             <li><span class="negrilla">Materia:</span><?php echo $fila["program_name"];?></li>
-            <tr style="height: 70px;">
+            <li style="height: 70px;"></li>
             <a href="nombredoc.html" class="button">Entrar</a>
         </ul>
         <?php 
