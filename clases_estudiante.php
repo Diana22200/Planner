@@ -29,7 +29,7 @@ $query1->execute();
     <nav class="inline_block menu_perfil letra_mediana">
         <ul>
             <li><a href="perfil_estudiante.php" class="boton boton_naranja2">Mi perfil</a></li>
-            <li><a href="clases_estudiante.html" class="boton_naranja2  boton">Clases</a></li>
+            <li><a href="clases_estudiante.php" class="boton_naranja2  boton">Clases</a></li>
             <li><a href="cronograma_general.php" class="boton_naranja2  boton">Cronograma</a></li>
             <li><a href="Quejas_pet_admin.php" class="boton_naranja2  boton">Quejas y peticiones</a></li>
             <li><a href="nombredoc.html" class="boton_naranja2  boton">Añadir clase</a></li>

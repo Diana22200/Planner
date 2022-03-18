@@ -1,3 +1,16 @@
+<?php
+include 'database.php';
+session_start();
+$num_doc = $_SESSION['numero_docu'];
+$name_doc = $_SESSION['tipo_docu'];
+//Consulta SQL
+$sql1="SELECT class.code, names, surname, subject FROM user 
+INNER JOIN surrogate_keys.document ON user.documentid = document.id 
+INNER JOIN user_class ON user_class.Userid = user.id 
+INNER JOIN class ON class.id = user_class.Classid 
+WHERE num_doc = $num_doc AND acronym_doc = '$name_doc';";
+
+?>            
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -28,16 +41,26 @@
     <main  class="cont_clases">
 
     <!--Clase 1-->
+    <?php     
+        $db = new Database();
+        $query = $db->connect()->prepare($sql1);    
+        $query->execute();
+        while ($fila = $query->fetch(PDO::FETCH_ASSOC)){
+
+    ?>
+     
         <div class="clase centrar ">
         <h2 class="border clase_titulo">Clase 1</h2>
-        <ul class="text_left letra_mediana">
-            <li class="letra_mediana"><span class="negrilla">Profesor:</span>Juan Ramírez</li>
-            <li class="letra_mediana"><span class="negrilla">Código:</span>63557</li>
-            <li class="letra_mediana"><span class="negrilla">Materia:</span>ADSI</li>
+        <ul>
+        <li><span class="negrilla">Nombre: </span><?php echo $fila["names"];?></li>
+        <li><span class="negrilla">Apellido:</span><?php echo $fila["surname"];?></li>
+        <li><span class="negrilla">Código para unirse:</span><?php echo $fila["code"];?></li>
+        <li><span class="negrilla">Materia:</span><?php echo $fila["subject"];?></li>
         </ul>
         <a href="nombredoc.html" class="boton_pequenio boton letra_mediana">Entrar</a>
         </div>
-
+        <?php 
+            }?>
     </main>
 </body>
 </html>
