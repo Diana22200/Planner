@@ -1,10 +1,11 @@
 <?php
 class Role{
-    private $nombre;
-    function __construct($nombre){
-
+    private $id;
+    private $type;
+    function __construct($id,$type){
+        $this->id=$id;
+        $this->type=$type;
     }
-}
 //get
 function __get($propiedad)
 {
@@ -20,4 +21,5 @@ function __set($propiedad, $value)
     }
 }
     /*Este corchete cierra la clase, aquí solo deben ir métodos o sino dará error */
+}
 ?>

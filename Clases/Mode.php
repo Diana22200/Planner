@@ -1,10 +1,15 @@
 <?php
 class Mode{
-    private $nombre;
-    function __construct($nombre){
-
+    private $id;
+    private $modality;
+    private $session_time;
+    private $education_level;
+    function __construct($id,$modality,$session_time,$education_level){
+        $this->id= $id;
+        $this-> modality=$modality;
+        $this-> session_time=$session_time;
+        $this-> education_level=$education_level;
     }
-}
 //get
 function __get($propiedad)
 {
@@ -20,4 +25,5 @@ function __set($propiedad, $value)
     }
 }
     /*Este corchete cierra la clase, aquí solo deben ir métodos o sino dará error */
+}
 ?>

@@ -1,10 +1,11 @@
 <?php
 class Qualification{
-    private $nombre;
-    function __construct($nombre){
-
+    private $id;
+    private $score;
+    function __construct($id,$score){
+        $this->id=$id;
+        $this->score=$score;
     }
-}
 //get
 function __get($propiedad)
 {
@@ -20,4 +21,5 @@ function __set($propiedad, $value)
     }
 }
     /*Este corchete cierra la clase, aquí solo deben ir métodos o sino dará error */
+}
 ?>

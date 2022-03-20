@@ -1,10 +1,19 @@
 <?php
 class Message{
-    private $nombre;
-    function __construct($nombre){
-
+    private $id;
+    private $text;
+    private $shipping_date;
+    private $title;
+    private $code;
+    function __construct($id,$text,$shipping_date,$title,$code){
+        
+        $this->id =$id;
+        $this->text =$text;
+        $this->shipping_date =$shipping_date;
+        $this->title =$title;
+        $this->code =$code;
     }
-}
+
 //get
 function __get($propiedad)
 {
@@ -20,4 +29,5 @@ function __set($propiedad, $value)
     }
 }
     /*Este corchete cierra la clase, aquí solo deben ir métodos o sino dará error */
+}
 ?>
