@@ -25,7 +25,6 @@ $query->execute();
 
 if($query){
     echo"<script>alert('Se modifico el usuario correctamente'); window.history.go(-2);</script>";
-    header:location:
 }else{
     echo"<script>alert('No se pudo modificar el registro.'); window.history.go(-1);</script>";
 }

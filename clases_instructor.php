@@ -45,12 +45,17 @@ WHERE num_doc = $num_doc AND acronym_doc = '$name_doc';";
         $db = new Database();
         $query = $db->connect()->prepare($sql1);    
         $query->execute();
+        //Para que aumente el número de la clase
+        $i=1;
         while ($fila = $query->fetch(PDO::FETCH_ASSOC)){
 
     ?>
      
         <div class="clase centrar ">
-        <h2 class="border clase_titulo">Clase 1</h2>
+        <h2 class="border clase_titulo">Clase <?php echo $i;?></h2>
+        <?php
+        $i=$i+1;
+        ?>
         <ul>
         <li><span class="negrilla">Nombre: </span><?php echo $fila["names"];?></li>
         <li><span class="negrilla">Apellido:</span><?php echo $fila["surname"];?></li>
