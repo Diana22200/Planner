@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 19-03-2022 a las 19:38:14
+-- Tiempo de generación: 21-03-2022 a las 00:29:16
 -- Versión del servidor: 10.4.22-MariaDB
 -- Versión de PHP: 8.0.13
 
@@ -36,20 +36,19 @@ CREATE TABLE `activity` (
   `deadline` date NOT NULL,
   `status` varchar(20) NOT NULL,
   `link` varchar(500) DEFAULT NULL,
-  `classid` int(11) NOT NULL,
-  `Yearid` int(11) NOT NULL
+  `classid` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `activity`
 --
 
-INSERT INTO `activity` (`id`, `code`, `title`, `description`, `type`, `deadline`, `status`, `link`, `classid`, `Yearid`) VALUES
-(1, 2201, 'Llaves naturales', 'hacer el código SQL de este diseño que está usando solo llaves naturales', 'Tarea', '2021-07-06', 'activo', 'https://classroom.google.com/u/3/c/Mjg5MDMwMTkyMjgy/a/Mjg5OTE5NjE0NTA2/details', 4, 4),
-(2, 2202, 'Llaves surrogates', 'hacer el código SQL de este diseño que está usando solo llaves surrogates', 'Tarea', '2021-07-06', 'activo', 'https://classroom.google.com/u/3/c/Mjg5MDMwMTkyMjgy/a/MjkwMzEzNjgwODA0/details', 4, 4),
-(3, 2203, 'Guías de DML y DDL', 'Realizar las sentencias DDL del proyecto a partir del modelo entidad relación ysentencias DML del proyecto para agregar la información.', 'Tarea', '2021-06-14', 'activo', 'https://classroom.google.com/u/1/c/Mjg5MDMwMTkyMjgy/a/MjkwMzEzNjgwOTcx/details', 4, 4),
-(4, 2204, 'Actividad definiciones', 'Vizualice el siguiente video relacionando el tema con su proyecto formativo', 'Tarea', '2021-05-14', 'inactivo', 'https://www.napofilm.net/es/napos-films/films?page=2&view_mode=page_grid', 1, 4),
-(5, 2205, 'Tell me the most important dates', 'You need to record your voice, and tell me the most important dates in Colombia. Submit in here the activity.', 'Activity', '2021-05-18', 'inactivo', 'https://classroom.google.com/u/1/c/Mjg5NDA4MjYzMTQ3/a/MjkwNTIwNjUyNDQ5/details', 3, 4);
+INSERT INTO `activity` (`id`, `code`, `title`, `description`, `type`, `deadline`, `status`, `link`, `classid`) VALUES
+(1, 2201, 'Llaves naturales', 'hacer el código SQL de este diseño que está usando solo llaves naturales', 'Tarea', '2021-07-06', 'activo', 'https://classroom.google.com/u/3/c/Mjg5MDMwMTkyMjgy/a/Mjg5OTE5NjE0NTA2/details', 4),
+(2, 2202, 'Llaves surrogates', 'hacer el código SQL de este diseño que está usando solo llaves surrogates', 'Tarea', '2021-07-06', 'activo', 'https://classroom.google.com/u/3/c/Mjg5MDMwMTkyMjgy/a/MjkwMzEzNjgwODA0/details', 4),
+(3, 2203, 'Guías de DML y DDL', 'Realizar las sentencias DDL del proyecto a partir del modelo entidad relación ysentencias DML del proyecto para agregar la información.', 'Tarea', '2021-06-14', 'activo', 'https://classroom.google.com/u/1/c/Mjg5MDMwMTkyMjgy/a/MjkwMzEzNjgwOTcx/details', 4),
+(4, 2204, 'Actividad definiciones', 'Vizualice el siguiente video relacionando el tema con su proyecto formativo', 'Tarea', '2021-05-14', 'inactivo', 'https://www.napofilm.net/es/napos-films/films?page=2&view_mode=page_grid', 1),
+(5, 2205, 'Tell me the most important dates', 'You need to record your voice, and tell me the most important dates in Colombia. Submit in here the activity.', 'Activity', '2021-05-18', 'inactivo', 'https://classroom.google.com/u/1/c/Mjg5NDA4MjYzMTQ3/a/MjkwNTIwNjUyNDQ5/details', 3);
 
 -- --------------------------------------------------------
 
@@ -362,29 +361,6 @@ INSERT INTO `user_message` (`id`, `Userid`, `messageid`, `situation`) VALUES
 (19, 1, 4, 'Recibido'),
 (20, 1, 5, 'Recibido');
 
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `year`
---
-
-CREATE TABLE `year` (
-  `id` int(11) NOT NULL,
-  `number_year` int(11) NOT NULL,
-  `status` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Volcado de datos para la tabla `year`
---
-
-INSERT INTO `year` (`id`, `number_year`, `status`) VALUES
-(1, 2018, 'inactivo'),
-(2, 2019, 'inactivo'),
-(3, 2020, 'inactivo'),
-(4, 2021, 'activo'),
-(5, 2022, 'inactivo');
-
 --
 -- Índices para tablas volcadas
 --
@@ -395,8 +371,7 @@ INSERT INTO `year` (`id`, `number_year`, `status`) VALUES
 ALTER TABLE `activity`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `uk_code_act` (`code`),
-  ADD KEY `fk_class_acti` (`classid`),
-  ADD KEY `fk_year_acti` (`Yearid`);
+  ADD KEY `fk_class_acti` (`classid`);
 
 --
 -- Indices de la tabla `class`
@@ -493,13 +468,6 @@ ALTER TABLE `user_message`
   ADD KEY `fk_mess_usme` (`messageid`);
 
 --
--- Indices de la tabla `year`
---
-ALTER TABLE `year`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `uk_num_year` (`number_year`);
-
---
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
@@ -582,12 +550,6 @@ ALTER TABLE `user_message`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
--- AUTO_INCREMENT de la tabla `year`
---
-ALTER TABLE `year`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
---
 -- Restricciones para tablas volcadas
 --
 
@@ -595,8 +557,7 @@ ALTER TABLE `year`
 -- Filtros para la tabla `activity`
 --
 ALTER TABLE `activity`
-  ADD CONSTRAINT `fk_class_acti` FOREIGN KEY (`classid`) REFERENCES `class` (`id`),
-  ADD CONSTRAINT `fk_year_acti` FOREIGN KEY (`Yearid`) REFERENCES `year` (`id`);
+  ADD CONSTRAINT `fk_class_acti` FOREIGN KEY (`classid`) REFERENCES `class` (`id`);
 
 --
 -- Filtros para la tabla `course`
