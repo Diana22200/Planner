@@ -1,10 +1,13 @@
 <?php
 class User_message{
-    private $nombre;
-    function __construct($nombre){
-
+    private $id;
+    private $situation;
+//Constructor
+    function __construct($id,$situation)
+    {
+        $this->id=$id;
+        $this->situation=$situation;
     }
-}
 //get
 function __get($propiedad)
 {
@@ -20,4 +23,5 @@ function __set($propiedad, $value)
     }
 }
     /*Este corchete cierra la clase, aquí solo deben ir métodos o sino dará error */
+}
 ?>

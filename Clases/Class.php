@@ -1,10 +1,17 @@
 <?php
 class Class{
-    private $nombre;
-    function __construct($nombre){
-
+    private $id;
+    private $code;
+    private $subject;
+    private $status;
+//Constructor
+    function __construct($id,$code,$subject,$status)
+    {
+        $this->id=$id;
+        $this->code=$code;
+        $this->subject=$subject;
+        $this->status=$status;
     }
-}
 //get
 function __get($propiedad)
 {
@@ -20,4 +27,5 @@ function __set($propiedad, $value)
     }
 }
     /*Este corchete cierra la clase, aquí solo deben ir métodos o sino dará error */
+}
 ?>
