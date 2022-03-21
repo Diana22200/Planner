@@ -28,7 +28,7 @@ $name_doc = $_SESSION['tipo_docu'];
             <li><a href="clases_instructor.php" class="boton_naranja2  boton">Clases</a></li>
             <li><a href="cronograma_general_instructor.php" class="boton_naranja2  boton">Cronograma</a></li>
             <li><a href="Quejas_peticiones_remitente.php" class="boton_naranja2  boton">Quejas y peticiones</a></li>
-            <li><a href="añadir_clase_instructor.html" class="boton_naranja2  boton">Añadir clase</a></li>
+            <li><a href="añadir_clase_instructor.php" class="boton_naranja2  boton">Añadir clase</a></li>
             <li><a href="iniciar_sesion.php?cerrar_sesion=1" class="boton_naranja2  boton">Cerrar sesión</a></li>
         </ul>
     </nav>
