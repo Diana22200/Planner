@@ -7,6 +7,9 @@
 -- Versión del servidor: 10.4.22-MariaDB
 -- Versión de PHP: 8.0.13
 
+CREATE DATABASE  IF NOT EXISTS `surrogate_keys` ;
+USE `surrogate_keys`;
+
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
