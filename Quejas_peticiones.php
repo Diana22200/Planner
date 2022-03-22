@@ -1,13 +1,8 @@
 <?php
-
-$server="localhost";
-$database="surrogate_keys";
-$user="root";
-$pass="";
-$conexion=new mysqli($server, $user, $pass, $database);
+include 'database.php';
+$recibido = "SELECT s.Userid, m.shipping_date, m.title, s.situation FROM message m JOIN user_message s ON s.messageid = m.id WHERE s.situation = 'Recibido' ORDER BY s.Userid ASC";
+                    
 ?>
-
-
 
 <html lang="es">
 <head>
@@ -36,28 +31,26 @@ $conexion=new mysqli($server, $user, $pass, $database);
     <main  class="inline_block cont_info_perfil">
         <table id="tabla">
             <tbody>
-                <tr style="height: 70px;">
+                <tr>
                     <th colspan="1" style="padding: 6px; text-align: center;"><strong>ID</strong></th>
                     <th colspan="1" style="padding: 6px; text-align: center;"><strong>FECHA</strong></th>
                     <th colspan="1" style="padding: 6px; text-align: center;"><strong>ASUNTO</strong></th>
                     <th colspan="1" style="padding: 6px; text-align: center;"><strong>DESTINATARIO</strong></th>
                     <th colspan="1" style="padding: 6px; text-align: center;"><strong>ELIMINAR</strong></th>
-                    
                  </tr>
-
-                <?php
-                    $sql="SELECT m.id, m.shipping_date, m.title, s.situation FROM message m JOIN user_message s ON s.Userid = m.id WHERE s.situation = 'Recibido';";
-                    $result=mysqli_query($conexion,$sql);
-                    while($mostrar=mysqli_fetch_array($result)){
-                ?>
+                <?php    $db = new Database();
+                        $query = $db->connect()->prepare($recibido);    
+                        $query->execute();
+                 while ($row = $query->fetch(PDO::FETCH_ASSOC)){
+                 ?>
 
 
             <tr>
-                <td width="150px" style="padding: 6px; text-align: center; padding: 15px;"><?php echo $mostrar["id"] ?></td>
-                <td width="150px" style="padding: 6px; text-align: center; padding: 15px;"><?php echo $mostrar["shipping_date"] ?></td>
-                <td width="350px" style="padding: 6px; text-align: center; padding: 15px;"><?php echo $mostrar["title"] ?></td>
-                <td width="200px" style="padding: 6px; text-align: center; padding: 15px;"><?php echo $mostrar["situation"] ?></td>
-                <td style="padding: 6px; text-align: center;"><a href="delete.php?id=<?php echo $mostrar["id"] ?>" class="message_del">Eliminar</a></td>
+                <td width="150px" style="padding: 6px; text-align: center; padding: 15px;"><?php echo $row["Userid"] ?></td>
+                <td width="150px" style="padding: 6px; text-align: center; padding: 15px;"><?php echo $row["shipping_date"] ?></td>
+                <td width="350px" style="padding: 6px; text-align: center; padding: 15px;"><?php echo $row["title"] ?></td>
+                <td width="200px" style="padding: 6px; text-align: center; padding: 15px;"><?php echo $row["situation"] ?></td>
+                <td style="padding: 6px; text-align: center;"><a href="procesar_eli_mensaje.php?id=<?php echo $row["Userid"] ?>" class="message_del">Eliminar</a></td>
             <tr>
                 <?php
                     }
@@ -65,6 +58,6 @@ $conexion=new mysqli($server, $user, $pass, $database);
             </tbody>
         </table>
     </main>
-    <script src="del_message_conf.js"></script>
+    <script src="eli_mensaje.js"></script>
 </body>
 </html>

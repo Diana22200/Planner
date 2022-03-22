@@ -126,9 +126,6 @@ nav{
 tbody {
     background: white;
 }
-tbody tr {
-    height: 70px
-}
 td, th {
     border: black 2px solid;
 }
@@ -195,4 +192,41 @@ td, th {
 }
 .link:visited{
     color: #3d3d7c;
+}
+
+/*Administrar Actividad*/
+.contenedor-lista-botones {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  .lista-botns {
+    float: left;
+  }
+  .lista-dos {
+    float: right;
+  }
+  
+  .lista-botns .boton_naranja2 {
+    display: block;
+    text-align: center;
+    padding: 8px;
+    text-decoration: none;
+    width: 150px;
+  }
+
+  .botn-der {
+    margin-right: 20px;
+  }
+
+  .botn-izq {
+    margin-left: 20px;
+  }
+
+  .cont_info_perfil_admin{
+    margin-top:30px;
+    margin-left: 200px;
+    margin-right: 200px;
 }

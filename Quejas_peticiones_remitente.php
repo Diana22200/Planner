@@ -1,10 +1,7 @@
 <?php
-
-$server="localhost";
-$database="surrogate_keys";
-$user="root";
-$pass="";
-$conexion=new mysqli($server, $user, $pass, $database);
+include 'database.php';
+$enviado = "SELECT s.Userid, m.shipping_date, m.title, s.situation FROM message m JOIN user_message s ON s.messageid = m.id WHERE s.situation = 'Enviado' ORDER BY s.Userid ASC;";
+                    
 ?>
 
 
@@ -46,19 +43,19 @@ $conexion=new mysqli($server, $user, $pass, $database);
                     
                  </tr>
 
-                <?php
-                    $sql="SELECT m.id, m.shipping_date, m.title, s.situation FROM message m JOIN user_message s ON s.Userid = m.id WHERE s.situation = 'Enviado';";
-                    $result=mysqli_query($conexion,$sql);
-                    while($mostrar=mysqli_fetch_array($result)){
-                ?>
+                 <?php    $db = new Database();
+                        $query = $db->connect()->prepare($enviado);    
+                        $query->execute();
+                 while ($row = $query->fetch(PDO::FETCH_ASSOC)){
+                 ?>
 
 
             <tr>
-                <td width="150px" style="padding: 6px; text-align: center; padding: 15px;"><?php echo $mostrar["id"] ?></td>
-                <td width="150px" style="padding: 6px; text-align: center; padding: 15px;"><?php echo $mostrar["shipping_date"] ?></td>
-                <td width="350px" style="padding: 6px; text-align: center; padding: 15px;"><?php echo $mostrar["title"] ?></td>
-                <td width="200px" style="padding: 6px; text-align: center; padding: 15px;"><?php echo $mostrar["situation"] ?></td>
-                <td style="padding: 6px; text-align: center;"><a href="eliminar.php?id=<?php echo $mostrar["id"] ?>" class="message_del">Eliminar</a></td>
+                <td width="150px" style="padding: 6px; text-align: center; padding: 15px;"><?php echo $row["Userid"] ?></td>
+                <td width="150px" style="padding: 6px; text-align: center; padding: 15px;"><?php echo $row["shipping_date"] ?></td>
+                <td width="350px" style="padding: 6px; text-align: center; padding: 15px;"><?php echo $row["title"] ?></td>
+                <td width="200px" style="padding: 6px; text-align: center; padding: 15px;"><?php echo $row["situation"] ?></td>
+                <td style="padding: 6px; text-align: center;"><a href="procesar_eli_mensaje_remit.php?id=<?php echo $row["Userid"] ?>" class="message_del">Eliminar</a></td>
         
                 <?php
                     }
