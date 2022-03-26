@@ -13,7 +13,7 @@
     <!--Título de la página-->
     <h1 class="letra_grande inline_block">Añadir clase</h1>
     <!--Formulario-->
-    <form class="formulario border letra_mediana" action="procesar_crea_clase.php"  method="POST">
+    <form class="formulario border letra_mediana" action="procesar_crear_clase.php"  method="POST">
         <ul class="text_left">
         
         <li><label>Materia:</label></li>
