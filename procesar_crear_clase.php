@@ -44,7 +44,7 @@ $random=rand(1000,9999);
     VALUES ('',$class_id,'$id_ficha')");   
     $query6->execute();    
   
-    echo"<script>alert('Se Añadió la clase correctamente'); window.history.go(-1);</script>";
+    echo"<script>alert('Se Añadió la clase correctamente'); window.history.go(-2);</script>";
     echo"<script>alert('Algo salió mal. Por favor intente de nuevo'); window.history.go(-1);</script>";
 ?>
 ?>

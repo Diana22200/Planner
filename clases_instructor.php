@@ -4,7 +4,7 @@ session_start();
 $num_doc = $_SESSION['numero_docu'];
 $name_doc = $_SESSION['tipo_docu'];
 //Consulta SQL
-$sql1="SELECT class.code, names, surname, subject FROM user 
+$sql1="SELECT class.id, class.code, names, surname,class.status, subject FROM user 
 INNER JOIN surrogate_keys.document ON user.documentid = document.id 
 INNER JOIN user_class ON user_class.Userid = user.id 
 INNER JOIN class ON class.id = user_class.Classid 
@@ -38,8 +38,8 @@ WHERE num_doc = $num_doc AND acronym_doc = '$name_doc';";
         </ul>
     </nav>
     <!--Contenido principal de las clases en el perfil instructor-->
+        <a href="añadir_clase_instructor.php" class="boton_pequenio boton letra_mediana">Agregar</a>
     <main  class="cont_clases">
-
     <!--Clase 1-->
     <?php     
         $db = new Database();
@@ -59,9 +59,11 @@ WHERE num_doc = $num_doc AND acronym_doc = '$name_doc';";
         <ul>
         <li><span class="negrilla">Nombre: </span><?php echo $fila["names"];?></li>
         <li><span class="negrilla">Apellido:</span><?php echo $fila["surname"];?></li>
-        <li><span class="negrilla">Código para unirse:</span><?php echo $fila["code"];?></li>
+        <li><span class="negrilla">Código:</span><?php echo $fila["code"];?></li>
+        <li><span class="negrilla">Estado:</span><?php echo $fila["status"];?></li>
         <li><span class="negrilla">Materia:</span><?php echo $fila["subject"];?></li>
         </ul>
+        <a href="modificar_clase.php?id=<?php echo $fila["id"];?>" class="boton_pequenio boton letra_mediana">Modificar</a>
         <a href="nombredoc.html" class="boton_pequenio boton letra_mediana">Entrar</a>
         </div>
         <?php 

@@ -9,7 +9,7 @@
 </head>
 <body class="fondo1 centrar">
     <!--Botón para volver a la página anterior-->
-    <a href="perfil_instructor.php" class="boton_naranja boton letra_mediana izquierda">Atrás</a>
+    <a href="clases_instructor.php" class="boton_naranja boton letra_mediana izquierda">Atrás</a>
     <!--Título de la página-->
     <h1 class="letra_grande inline_block">Añadir clase</h1>
     <!--Formulario-->

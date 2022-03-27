@@ -246,4 +246,5 @@ nav{
 /*Ocultar elementos*/
 .hide{
     visibility: hidden;
+    display:hide;
 }
