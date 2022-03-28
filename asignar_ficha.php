@@ -8,7 +8,7 @@
     <title>Asignar ficha</title>
 </head>
 <body>
-    <a href="<script>window.history.go(-1);</script>">Atrás</a>
+    <a href="mod_usuario.php">Atrás</a>
     <h2>Asignar ficha</h2>
     <form  action="Procesar_asig.php" method="post">
         <section class="tabla">

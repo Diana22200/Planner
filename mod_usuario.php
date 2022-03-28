@@ -34,7 +34,7 @@ $usuarios = "SELECT acronym_doc, num_doc, names, surname, user.id, type FROM use
         </nav>
     <div class="seach">
         <input class="buscar inline_block" type="search" name="" placeholder="Buscar">
-        <input class="botton" type="submit" value="Asignar ficha">
+        <a href="asignar_ficha.php" class="botton">Asignar ficha</a>
     </div>
     <main  class="inline_block cont_info_perfil">
         <table id="tabla">
