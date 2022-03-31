@@ -21,7 +21,7 @@ $actividades = "SELECT code, deadline, title, status, id FROM activity";
     <!--Menú de Cronograma-->
         <ul class="contenedor-lista-botones">
         <li class="lista-botns"><a href="#" class="boton_naranja2 boton botn-izq">Atrás</a></li>
-        <li class="lista-botns lista-dos"><a href="#" class="boton_naranja2 boton botn-der">Añadir actividad</a></li>
+        <li class="lista-botns lista-dos"><a href="añadir_actividad.php" class="boton_naranja2 boton botn-der">Añadir actividad</a></li>
         </ul>
     <!--Información del Cronograma-->
     <main  class="inline_block cont_info_perfil_admin">
