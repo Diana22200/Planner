@@ -82,12 +82,6 @@ nav{
     box-shadow:4px 3px black;
     margin:15px 0;
 }
-.logo{
-    position: absolute;
-    right: 500px;
-    left:6px;
-    top: 3px;
-}
 
 /*Estilos tabla del Cronograma*/
 
@@ -111,6 +105,11 @@ tr td {
     padding: 6px; 
     text-align: center; 
     padding: 15px;
+}
+
+.obj4_tabl {
+    width: 220px;
+    height: 70px;
 }
 .obj3_tabl {
     width: 350px;

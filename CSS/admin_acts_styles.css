@@ -11,15 +11,8 @@
     box-sizing: border-box;
 }
 /*El primer color de fondo del body*/
-.fondo1{
-    background-color:#fff7e0;
-}
 .fondo2{
     background-color:#fff7e0;
-}
-/*Margen para el navegador*/
-nav{
-    margin: 10px;
 }
 /*Tamaños de letra*/
 .letra_mediana{
@@ -37,6 +30,10 @@ nav{
     margin-left: auto;
     text-align: center;
 }
+.cabecera{
+    background-color: #ea681a;
+    padding: 10px;
+}
 /*botones en general*/
 .boton{
     padding: 1px 1.4em;
@@ -46,35 +43,8 @@ nav{
 .boton:active {
     transform: scale(.95);
 }
-
-.logo{
-    position: absolute;
-    right: 500px;
-    left:6px;
-    top: 3px;
-    width: 90px;
-}
-/*botones naranjas en general, en especial los del navegador*/
-
 .inline_block{
     display: inline-block;
-}
-
-.cabecera{
-    background-color: #ea681a;
-    padding: 10px;
-}
-.menu_perfil{
-    background-color: #fc9d4b;
-    padding: 20px;
-    width: 20%;
-    height: 860px;
-    float:left;
-    margin: 0;
-}
-.cont_info_perfil{
-    margin-top:20px;
-    margin-left: 130px;
 }
 .boton_naranja2{
     background-color:#dd5e17;
@@ -87,9 +57,10 @@ nav{
     right: 500px;
     left:6px;
     top: 3px;
+    width: 90px;
 }
 
-/*Estilos tabla del Cronograma*/
+/*Estilos de la tabla*/
 
 #tabla {
     border-collapse: collapse;
@@ -112,12 +83,48 @@ tr td {
     text-align: center; 
     padding: 15px;
 }
-.obj3_tabl {
+.act_tabl {
     width: 350px;
 }
-.obj2_tabl {
+.estad_tabl {
     width: 200px;
 }
 .obj_tabl {
     width: 150px;
+}
+/*Administrar Actividad*/
+.contenedor-lista-botones {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  .lista-botns {
+    float: left;
+  }
+  .lista-dos {
+    float: right;
+  }
+  
+  .lista-botns .boton_naranja2 {
+    display: block;
+    text-align: center;
+    padding: 8px;
+    text-decoration: none;
+    width: 150px;
+  }
+
+  .botn-der {
+    margin-right: 20px;
+  }
+
+  .botn-izq {
+    margin-left: 20px;
+  }
+
+  .cont_info_perfil_admin{
+    margin-top:30px;
+    margin-left: 200px;
+    margin-right: 200px;
 }

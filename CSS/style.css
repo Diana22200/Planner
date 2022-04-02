@@ -64,12 +64,13 @@ nav{
 /*Parte página index de eslogan*/
 .eslogan{
     background-color: #fad39a;
-    line-height: 210px;
+    line-height: 100px;
     width: 70%;
     position: absolute;
-    bottom:150px;
+    bottom:100px;
     display:inline-block;
 }
+
 /*botones naranjas en general, en especial los del navegador*/
 .boton_naranja{
     background-color: #f4944c;
@@ -247,4 +248,8 @@ nav{
 .hide{
     visibility: hidden;
     display:hide;
+}
+
+.imagen_sec {
+    width: 40%;
 }

@@ -1,11 +1,3 @@
-<?php
-include 'database.php';
-$enviado = "SELECT s.Userid, m.shipping_date, m.title, s.situation FROM message m JOIN user_message s ON s.messageid = m.id WHERE s.situation = 'Enviado' ORDER BY s.Userid ASC;";
-                    
-?>
-
-
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -18,7 +10,7 @@ $enviado = "SELECT s.Userid, m.shipping_date, m.title, s.situation FROM message 
 <body class="fondo2">
     <!--Cabecera-->
     <header class="cabecera centrar">
-    <img class="logo" src="https://i.postimg.cc/KzWPXR4b/logo-planner-2-1.png" style="width:7%; height:70px;">
+    <img class="logo" src="https://i.postimg.cc/KzWPXR4b/logo-planner-2-1.png">
     <h1 class="inline_block letra_grande">Quejas y peticiones</h1>
     </header>
     <!--Menú de Cronograma-->
@@ -34,37 +26,30 @@ $enviado = "SELECT s.Userid, m.shipping_date, m.title, s.situation FROM message 
     <main  class="inline_block cont_info_perfil">
     <table id="tabla">
             <tbody>
-                <tr style="height: 70px;">
-                    <th colspan="1" style="padding: 6px; text-align: center;"><strong>ID</strong></th>
-                    <th colspan="1" style="padding: 6px; text-align: center;"><strong>FECHA</strong></th>
-                    <th colspan="1" style="padding: 6px; text-align: center;"><strong>ASUNTO</strong></th>
-                    <th colspan="1" style="padding: 6px; text-align: center;"><strong>REMITENTE</strong></th>
-                    <th colspan="1" style="padding: 6px; text-align: center;"><strong>ELIMINAR</strong></th>
-                    
+                <tr>
+                    <th colspan="1"><strong>ID</strong></th>
+                    <th colspan="1"><strong>FECHA</strong></th>
+                    <th colspan="1"><strong>ASUNTO</strong></th>
+                    <th colspan="1"><strong>REMITENTE</strong></th>
+                    <th colspan="1"><strong>ELIMINAR</strong></th>
                  </tr>
 
-                 <?php    $db = new Database();
-                        $query = $db->connect()->prepare($enviado);    
-                        $query->execute();
-                 while ($row = $query->fetch(PDO::FETCH_ASSOC)){
-                 ?>
+                <tr>
+                    <td class="obj_tabl"><?php echo $row["Userid"] ?></td>
+                    <td class="obj_tabl"><?php echo $row["shipping_date"] ?></td>
+                    <td class="obj3_tabl"><?php echo $row["title"] ?></td>
+                    <td class="obj2_tabl"><?php echo $row["situation"] ?></td>
+                    <td class="obj_tabl"><a href="procesar_eli_mensaje_remit.php?id=<?php echo $row["Userid"] ?>" class="message_del">Eliminar</a></td>
+                </tr>
+                    <!-- echo "<td class="obj_tabl">". $row["Userid"]."</td>";
+                    echo "<td class="obj_tabl">". $row["shipping_date"]."</td>";
+                    echo "<td class="obj3_tabl">". $row["title"]."</td>";
+                    echo "<td class="obj2_tabl">" .$row["situation"]."</td>";
+                    echo "<td class="obj_tabl">". $row["id"]."<a class="message_del">Eliminar</a></td>"; -->
 
-
-            <tr>
-                <td width="150px" style="padding: 6px; text-align: center; padding: 15px;"><?php echo $row["Userid"] ?></td>
-                <td width="150px" style="padding: 6px; text-align: center; padding: 15px;"><?php echo $row["shipping_date"] ?></td>
-                <td width="350px" style="padding: 6px; text-align: center; padding: 15px;"><?php echo $row["title"] ?></td>
-                <td width="200px" style="padding: 6px; text-align: center; padding: 15px;"><?php echo $row["situation"] ?></td>
-                <td style="padding: 6px; text-align: center;"><a href="procesar_eli_mensaje_remit.php?id=<?php echo $row["Userid"] ?>" class="message_del">Eliminar</a></td>
-        
-                <?php
-                    }
-                                      
-                    
-                ?>
             </tbody>
         </table>
     </main>
-    <script src="del_message_conf.js"></script>
+    <script src="eli_message.js"></script>
 </body>
 </html>

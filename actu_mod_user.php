@@ -40,14 +40,14 @@ $usuarios = "SELECT acronym_doc, num_doc, names, surname, user.id, status, type 
     <form action="procesar_mod_us.php" class="inline_block cont_info_perfil" method="post">
         <table id="tabla">
             <tbody>
-                <tr style="height: 70px;">
-                    <th colspan="1" style="padding: 6px; text-align: center;"><strong>TIPO DOC</strong></th>
-                    <th colspan="1" style="padding: 6px; text-align: center;"><strong>NUM DOC</strong></th>
-                    <th colspan="1" style="padding: 6px; text-align: center;"><strong>NOMBRE</strong></th>
-                    <th colspan="1" style="padding: 6px; text-align: center;"><strong>APELLIDO</strong></th>
-                    <th colspan="1" style="padding: 6px; text-align: center;"><strong>ESTADO</strong></th>
-                    <th colspan="1" style="padding: 6px; text-align: center;"><strong>ROL</strong></th>
-                    <th colspan="1" style="padding: 6px; text-align: center;"><strong>MODIFICAR</strong></th>
+                <tr>
+                    <th colspan="1"><strong>TIPO DOC</strong></th>
+                    <th colspan="1"><strong>NUM DOC</strong></th>
+                    <th colspan="1"><strong>NOMBRE</strong></th>
+                    <th colspan="1"><strong>APELLIDO</strong></th>
+                    <th colspan="1"><strong>ROL</strong></th>
+                    <th colspan="1"><strong>MODIFICAR</strong></th>
+                    <th colspan="1"><strong>ELIMINAR</strong></th>
                  </tr>
                  <?php    $db = new Database();
                         $query = $db->connect()->prepare($usuarios);    
